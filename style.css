@@ -1,0 +1,377 @@
+/* ===== 1. CSS VARIABLES (Theme Colors) ===== */
+:root {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f9fb;
+  --bg-tertiary: #eef3f6;
+  --text-primary: #222222;
+  --text-secondary: #555555;
+  --text-tertiary: #444444;
+  --accent-primary: #567b81;
+  --accent-blue: #567b81;
+  --accent-green: #a7ba93;
+  --accent-orange: #f9b97f;
+  --nav-bg: rgba(255, 255, 255, 0.95);
+  --card-bg: #ffffff;
+  --input-border: #dddddd;
+  --shadow-light: rgba(0, 0, 0, 0.05);
+  --shadow-medium: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] {
+  --bg-primary: #1a1a1a;
+  --bg-secondary: #0f0f0f;
+  --bg-tertiary: #252525;
+  --text-primary: #e8e8e8;
+  --text-secondary: #b0b0b0;
+  --text-tertiary: #d0d0d0;
+  --accent-primary: #7da8af;
+  --accent-blue: #7da8af;
+  --accent-green: #b8cc9f;
+  --accent-orange: #fac793;
+  --nav-bg: rgba(26, 26, 26, 0.95);
+  --card-bg: #2a2a2a;
+  --input-border: #404040;
+  --shadow-light: rgba(0, 0, 0, 0.3);
+  --shadow-medium: rgba(0, 0, 0, 0.5);
+}
+
+/* ===== 2. RESET & BASE STYLES ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  line-height: 1.8; 
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* ===== 3. NAVIGATION ===== */
+.nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1.2rem 2rem;
+  background: var(--nav-bg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  border-bottom: 1px solid var(--input-border);
+}
+
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #567b81, #a7ba93);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.nav nav {
+  display: flex;
+  gap: 1.8rem;
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--text-tertiary);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav a:hover {
+  color: var(--accent-blue);
+}
+
+/* ===== 4. TYPOGRAPHY & SECTIONS ===== */
+.section {
+  padding: 10rem 12%; 
+}
+
+.section-soft {
+  background: var(--bg-tertiary);
+}
+
+.section-title {
+  font-size: 2.0rem;
+  margin-bottom: 5rem; 
+  font-weight: 700;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+  width: 70px;
+  height: 10px;
+  background: linear-gradient(90deg, var(--accent-blue), var(--accent-green));
+  border-radius: 5px;
+}
+
+/* ===== 5. HERO SECTION (Animated Name) ===== */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title {
+  font-size: clamp(2rem, 8vw, 3.5rem); 
+  font-weight: 800;
+  line-height: 1.2; 
+  margin-bottom: 0.5rem; 
+  overflow: visible;
+}
+
+.highlight {
+  background: linear-gradient(120deg, #567b81, #a7ba93, #f9b97f, #567b81);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  font-weight: 900;
+  animation: gradientMove 4s linear infinite;
+  
+
+  transition: transform 0.2s ease-out;
+  transform-style: preserve-3d;
+  
+
+  padding: 0.1em 0; 
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  margin-top: 0; 
+  color: var(--text-secondary);
+  letter-spacing: 0.05em;
+  display: block; 
+}
+
+/* ===== 6. ABOUT SECTION (Photo Layout) ===== */
+.about-grid {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+.photo-placeholder {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px var(--shadow-medium);
+  transition: transform 0.3s ease;
+}
+
+.profile-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.bio-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.section-text {
+  font-size: 1.15rem;
+  color: var(--text-secondary);
+  max-width: 800px;
+}
+
+/* ===== 7. CARDS & GRIDS (Experience, Education, Skills) ===== */
+.info-card {
+  background: var(--card-bg);
+  padding: 3rem;
+  border-radius: 25px;
+  border: 1px solid var(--input-border);
+  margin-bottom: 2.5rem;
+  box-shadow: 0 10px 30px var(--shadow-light);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 45px var(--shadow-medium);
+}
+
+.info-card h3 {
+  font-size: 1.5rem;
+  color: var(--accent-primary);
+  margin-bottom: 1rem;
+}
+
+.highlight-text {
+  color: var(--accent-orange);
+  font-weight: 600;
+  display: block;
+  margin: 0.5rem 0;
+}
+
+.exp-list {
+  list-style: none;
+  margin-top: 1.5rem;
+}
+
+.exp-list li {
+  margin-bottom: 1.2rem;
+  color: var(--text-secondary);
+}
+
+.skill-grid, .project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 3rem;
+}
+
+.skill-card {
+  border-top: 6px solid var(--accent-color);
+}
+
+.accent-blue { --accent-color: var(--accent-blue); }
+.accent-green { --accent-color: var(--accent-green); }
+.accent-orange { --accent-color: var(--accent-orange); }
+
+/* ===== 8. PROJECTS ===== */
+.project-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project-link {
+  margin-top: 2rem;
+  padding: 0.8rem 1.5rem;
+  background: var(--accent-blue);
+  color: white !important;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: 600;
+  width: fit-content;
+  transition: 0.3s;
+}
+
+.project-link:hover {
+  background: var(--accent-green);
+  transform: translateX(5px);
+}
+
+/* ===== 9. CONTACT SECTION ===== */
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+}
+
+.info-item {
+  margin-bottom: 3rem;
+}
+
+.info-item h3 {
+  font-size: 1.3rem;
+  color: var(--accent-primary);
+  margin-bottom: 0.8rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contact-form input, .contact-form textarea {
+  padding: 1.2rem;
+  border-radius: 12px;
+  border: 1px solid var(--input-border);
+  background: var(--card-bg);
+  color: var(--text-primary);
+  font-size: 1rem;
+}
+
+.contact-form button {
+  padding: 1.2rem;
+  background: linear-gradient(135deg, var(--accent-blue), var(--accent-green));
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* ===== 10. THEME TOGGLE & MOBILE ===== */
+.theme-toggle {
+  background: var(--card-bg);
+  border: 2px solid var(--input-border);
+  border-radius: 50px;
+  width: 60px;
+  height: 32px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 0 4px;
+}
+
+.theme-toggle-circle {
+  width: 22px;
+  height: 22px;
+  background: linear-gradient(135deg, var(--accent-orange), var(--accent-green));
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+
+[data-theme="dark"] .theme-toggle-circle {
+  transform: translateX(28px);
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .section { padding: 6rem 8%; }
+  .about-grid, .contact-container { grid-template-columns: 1fr; gap: 4rem; }
+  .nav nav { display: none; }
+  .menu-toggle { display: block; }
+}
