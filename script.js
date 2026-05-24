@@ -44,3 +44,48 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.section-title, .info-card, .skill-card, .photo-placeholder').forEach(el => observer.observe(el));
 window.addEventListener('load', () => document.querySelector('.hero').classList.add('show'));
+
+/* ===== TYPEWRITER EFFECT ===== */
+const typewriterElement = document.getElementById('typewriter');
+const phrases = [
+  "3rd Year IT Student",
+  "Web Technology Major",
+  "Technical Problem Solver"
+];
+let phraseIndex = 0;
+let characterIndex = 0;
+let isDeleting = false;
+let typingSpeed = 100;
+
+function typeEffect() {
+  const currentPhrase = phrases[phraseIndex];
+  
+  if (isDeleting) {
+    typewriterElement.textContent = currentPhrase.substring(0, characterIndex - 1);
+    characterIndex--;
+    typingSpeed = 50; // Faster deletion
+  } else {
+    typewriterElement.textContent = currentPhrase.substring(0, characterIndex + 1);
+    characterIndex++;
+    typingSpeed = 100; // Natural typing speed
+  }
+
+  if (!isDeleting && characterIndex === currentPhrase.length) {
+    typingSpeed = 2000; // Pause at full phrase
+    isDeleting = true;
+  } else if (isDeleting && characterIndex === 0) {
+    isDeleting = false;
+    phraseIndex = (phraseIndex + 1) % phrases.length;
+    typingSpeed = 500; // Pause before starting next phrase
+  }
+
+  setTimeout(typeEffect, typingSpeed);
+}
+
+// Initialise typewriter
+window.addEventListener('load', () => {
+  if (typewriterElement) {
+    typewriterElement.textContent = '';
+    setTimeout(typeEffect, 1000);
+  }
+});

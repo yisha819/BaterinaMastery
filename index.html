@@ -1,141 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ayisha Baterina | Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<header class="nav">
-  <div class="nav-content">
-    <h1 class="logo">Ayisha Baterina</h1>
-    <div class="nav-right">
-      <nav id="navMenu">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#education">Education</a>
-        <a href="#experience">Experience</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
-        <div class="theme-toggle-circle"><span id="themeIcon">☀️</span></div>
-      </button>
-      <button class="menu-toggle" id="menuToggle">☰</button>
+  <header class="nav">
+    <div class="nav-content">
+      <h1 class="logo">Ayisha Baterina</h1>
+      <div class="nav-right">
+        <nav id="navMenu">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#education">Education</a>
+          <a href="#experience">Experience</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+          <div class="theme-toggle-circle"><span id="themeIcon">☀️</span></div>
+        </button>
+        <button class="menu-toggle" id="menuToggle">☰</button>
+      </div>
     </div>
-  </div>
-</header>
+  </header>
 
-<section id="home" class="section hero">
-  <h2 class="title">Hi, I'm <span class="highlight">Ayisha Baterina</span></h2>
-  <p class="subtitle">3rd Year IT Student • Web Technology Major • Networking Enthusiast</p>
-</section>
+  <section id="home" class="section hero">
+    <h2 class="title">Hi, I'm <span class="highlight">Ayisha Baterina</span></h2>
+    <p class="subtitle"><span id="typewriter">3rd Year IT Student • Web Technology Major • Technical Problem
+        Solver</span><span class="typewriter-cursor">|</span></p>
+  </section>
 
-<section id="about" class="section section-soft">
-  <h2 class="section-title">About Me</h2>
-  <div class="about-grid">
-    <div class="photo-placeholder">
-      <img src="IMG_0944.jpeg" alt="Ayisha Baterina" class="profile-img">
+  <section id="about" class="section section-soft">
+    <h2 class="section-title">About Me</h2>
+    <div class="about-grid">
+      <div class="photo-placeholder">
+        <img src="IMG_0944.jpeg" alt="Ayisha Baterina" class="profile-img">
+      </div>
+      <div class="bio-content">
+        <p class="section-text">
+          Hi! I’m Ayisha. I’m a third-year <strong>Information Technology</strong> major at the <strong>University of
+            the Cordilleras</strong>, specializing in systems design, full-stack engineering, and secure network
+          infrastructures.
+        </p>
+        <p class="section-text">
+          My technical journey focuses on building robust backend systems, automating technical workflows, and exploring
+          <strong>intelligent data technologies</strong>. With hands-on proficiency in Python data systems,
+          CCNA-certified networks, and Linux server operations, I am driven by the intersection of <strong>systems
+            engineering and AI research</strong>. This portfolio showcases my analytical problem-solving and the
+          engineering projects I have built.
+        </p>
+      </div>
     </div>
-    <div class="bio-content">
-      <p class="section-text">
-        Hi! I’m Ayisha. I’m from La Trinidad, Benguet, and I’m currently a third-year <strong>Information Technology</strong> student at the <strong>University of the Cordilleras</strong>. 
-      </p>
-      <p class="section-text">
-        My major is Web Technology, and I’ve spent the last few years learning how to build and design for the web. I’m really interested in making websites that are not only functional but also easy for people to use. Right now, I’m focused on sharpening my coding skills and working on projects that solve real problems. This portfolio shows the work I’ve done so far and the skills I'm developing.
-      </p>
-    </div>
-  </div>
-</section>
+  </section>
 
-<section id="education" class="section">
-  <h2 class="section-title">Education & Honors</h2>
-  <div class="info-card">
-    <h3>University of the Cordilleras</h3>
-    <p>Bachelor of Science in Information Technology (Web Technology)</p>
-    <span class="highlight-text">Dean’s Lister (2023 – Present)</span>
-    <p>Current 3rd Year Student</p>
-  </div>
-  <div class="info-card">
-    <h3>Cisco Networking Academy</h3>
-    <p><strong>Certificate: CCNAv7: Introduction to Networks</strong></p>
-    <span>Issued: February 2025</span>
-  </div>
-</section>
+  <section id="education" class="section">
+    <h2 class="section-title">Education & Honors</h2>
+    <div class="education-timeline">
+      <div class="info-card">
+        <span class="date-badge">Expected Graduation: Sept 2026</span>
+        <h3>University of the Cordilleras</h3>
+        <p class="edu-sub"><strong>Bachelor of Science in Information Technology</strong> (Major in Web Technology)</p>
+        <p class="edu-loc">Governor Pack Road, Baguio City</p>
+        <span class="highlight-text">★ Dean’s Lister (2023 – Present)</span>
+      </div>
+      <div class="info-card">
+        <span class="date-badge">Graduated: May 2023</span>
+        <h3>H.O.P.E Christian Academy Inc.</h3>
+        <p class="edu-sub"><strong>Science, Technology, Engineering, and Mathematics Strand</strong> (STEM)</p>
+        <p class="edu-loc">Taroy, Poblacion, La Trinidad, Benguet</p>
+        <span class="highlight-text">★ Graduated with Honors</span>
+      </div>
+      <div class="info-card">
+        <span class="date-badge">Graduated: March 2016</span>
+        <h3>H.O.P.E Christian Academy Inc.</h3>
+        <p class="edu-sub"><strong>Junior High School Curriculum</strong></p>
+        <p class="edu-loc">Taroy, Poblacion, La Trinidad, Benguet</p>
+      </div>
+    </div>
+  </section>
 
-<section id="experience" class="section section-soft">
-  <h2 class="section-title">Experience & Training</h2>
-  <div class="info-card">
-    <h3>Technical Progression</h3>
-    <p><strong>University of the Cordilleras</strong></p>
-    <ul class="exp-list">
-      <li>• Built and deployed responsive web prototypes using <strong>HTML, CSS, and PHP</strong>.</li>
-      <li>• Gained hands-on experience in <strong>Network Configuration</strong> and security through CCNA coursework.</li>
-      <li>• Managed version control and project collaboration using <strong>GitHub</strong>.</li>
-      <li>• Participant: <strong>DevFest Baguio 2024</strong> - Engaged in workshops regarding AI and Web Tech.</li>
-    </ul>
-  </div>
-</section>
+  <section id="experience" class="section section-soft">
+    <h2 class="section-title">Professional Growth & Seminars</h2>
 
-<section id="skills" class="section">
-  <h2 class="section-title">Skills & Qualifications</h2>
-  <div class="skill-grid">
-    <div class="skill-card accent-blue">
-      <h3>Web Technology</h3>
-      <p>HTML5, CSS3, PHP, GitHub, API Integration, UI/UX Design</p>
-    </div>
-    <div class="skill-card accent-green">
-      <h3>Programming</h3>
-      <p>Python, C#, SQL, Linux System Operations</p>
-    </div>
-    <div class="skill-card accent-orange">
-      <h3>Network & Security</h3>
-      <p>CCNAv7, Cryptography, Network Configuration & Cybersecurity</p>
-    </div>
-  </div>
-</section>
+    <div class="timeline-split">
+      <div class="timeline-col">
+        <h3 class="subsection-header">Technical Progression</h3>
+        <div class="info-card">
+          <h4>Cisco Networking Academy</h4>
+          <p class="role-desc"><strong>CCNA: Introduction to Networks Certificate</strong></p>
+          <span class="highlight-text">Issued: Feb 2025</span>
+          <p class="prog-text">Acquired fundamental expertise in physical cabling, IP addressing schemes, subnetting,
+            and switch/router initial settings.</p>
+        </div>
+        <div class="info-card">
+          <h4>Systems Operations</h4>
+          <p class="role-desc"><strong>University & Independent Development</strong></p>
+          <ul class="exp-list">
+            <li>• Architected and deployed production-ready full-stack applications with modular database schemas.</li>
+            <li>• Structured complex programmatic solutions using API integration, Git controls, and command-line
+              automation.</li>
+          </ul>
+        </div>
+      </div>
 
-<section id="projects" class="section section-soft">
-  <h2 class="section-title">Projects</h2>
-  <div class="project-grid">
-    <div class="info-card project-card">
-      <h3>Company Website</h3>
-      <p>Responsive website for a local business built with HTML and CSS.</p>
-      <a href="https://yisha819.github.io/sinks/" target="_blank" class="project-link">View Project →</a>
+      <div class="timeline-col">
+        <h3 class="subsection-header">Seminars & Research Events</h3>
+        <div class="seminar-grid">
+          <div class="seminar-item">
+            <span class="seminar-date">March 14, 2026</span>
+            <h5>Practical Data Analytics & Visualization</h5>
+            <p class="seminar-meta">Python-based Data Science bootcamp specializing in analytical modeling • Baguio City
+            </p>
+          </div>
+          <div class="seminar-item">
+            <span class="seminar-date">August 22, 2025</span>
+            <h5>DECODE 2025: University Capture the Flag</h5>
+            <p class="seminar-meta">Intensive cybersecurity competition focusing on server defense and cryptography •
+              Baguio City</p>
+          </div>
+          <div class="seminar-item">
+            <span class="seminar-date">November 09, 2024</span>
+            <h5>Google Developer Group (GDG) Seminar</h5>
+            <p class="seminar-meta">Engineering workshops covering modern Artificial Intelligence models and emerging
+              web platforms • University of the Cordilleras</p>
+          </div>
+          <div class="seminar-item">
+            <span class="seminar-date">December 2024</span>
+            <h5>DevFest Baguio 2024</h5>
+            <p class="seminar-meta">Engaged in tech panels addressing cloud computing, AI, and developer tools</p>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="info-card project-card">
-      <h3>API Integrated App</h3>
-      <p>Web application that fetches and displays third-party API data.</p>
-      <a href="https://yisha819.github.io/api-call/" target="_blank" class="project-link">View Project →</a>
-    </div>
-    <div class="info-card project-card">
-      <h3>Login System</h3>
-      <p>A secure corporate login interface tailored for system access.</p>
-      <a href="https://yisha819.github.io/sinkssys/" target="_blank" class="project-link">View Project →</a>
-    </div>
-  </div>
-</section>
+  </section>
 
-<section id="contact" class="section">
-  <h2 class="section-title">Contact Information</h2>
-  <div class="contact-container">
-    <div class="contact-info">
-      <div class="info-item"><h3>Email</h3><p>Gmail: haileybaterina@gmail.com</p><p>School Email: alb3472@students.uc-bcf.edu.ph</p></div>
-      <div class="info-item"><h3>Location</h3><p>La Trinidad, Benguet</p></div>
-      <div class="info-item"><h3>Github</h3><a href="https://github.com/yisha819" target="_blank" class="github">GitHub</a></div>
-    </div>
-    <form class="contact-form">
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Email Address" required />
-      <textarea placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </div>
-</section>
+  <section id="skills" class="section">
+    <h2 class="section-title">Technical Capabilities</h2>
+    <div class="skill-grid">
+      <div class="skill-card accent-blue">
+        <h3>Systems & Backend Development</h3>
+        <ul class="skill-details">
+          <li><strong>Software Engineering:</strong> Advanced development in Python, C#, and SQL; practical full-stack
+            deployment using React and Laravel.</li>
+          <li><strong>Technical Environments:</strong> Deep familiarity with Linux system administration, advanced CLI
+            navigation, and repository controls (GitHub).</li>
+          <li><strong>Ecosystem Tools:</strong> Package and dependency orchestration using NPM and Composer inside
+            continuous integration workflows.</li>
+        </ul>
+      </div>
 
-<script src="script.js"></script>
+      <div class="skill-card accent-green">
+        <h3>Intelligent Data & Security</h3>
+        <ul class="skill-details">
+          <li><strong>Data & Research Operations:</strong> Practical logic engineering, Python data visualization, and
+            structured data analytics workflows.</li>
+          <li><strong>Secure Infrastructures:</strong> Cisco routers and LAN switches configuration (CCNA 1 & 2); secure
+            routing protocols.</li>
+          <li><strong>Information Defense:</strong> Solid foundation in active cybersecurity operations, cryptography,
+            and secure API data interfaces.</li>
+        </ul>
+      </div>
+
+      <div class="skill-card accent-orange">
+        <h3>Core Research Methodologies</h3>
+        <ul class="skill-details">
+          <li><strong>Structured Logic:</strong> Exceptional proficiency in programmatic problem-solving, architectural
+            design, and optimization models.</li>
+          <li><strong>Collaborative Operations:</strong> Team coordination, task prioritization, and structured
+            technical documentation inside development cycles.</li>
+          <li><strong>Information Integrity:</strong> High-fidelity data compilation, reporting, and technical synthesis
+            using advanced productivity tools.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="section section-soft">
+    <h2 class="section-title">Projects</h2>
+    <div class="project-grid">
+      <div class="info-card project-card">
+        <h3>Company Website</h3>
+        <p>Responsive website for a local business built with HTML and CSS.</p>
+        <a href="https://yisha819.github.io/sinks/" target="_blank" class="project-link">View Project →</a>
+      </div>
+      <div class="info-card project-card">
+        <h3>API Integrated App</h3>
+        <p>Web application that fetches and displays third-party API data.</p>
+        <a href="https://yisha819.github.io/api-call/" target="_blank" class="project-link">View Project →</a>
+      </div>
+      <div class="info-card project-card">
+        <h3>Login System</h3>
+        <p>A secure corporate login interface tailored for system access.</p>
+        <a href="https://yisha819.github.io/sinkssys/" target="_blank" class="project-link">View Project →</a>
+      </div>
+      <div class="info-card project-card">
+        <h3>ValleyCare:Queueing and Appointment System</h3>
+        <p>A system we created as our Capstone Project for a clinic in La Trinidad we partnered with.</p>
+        <a href="https://valleycare.vercel.app/dashboard" target="_blank" class="project-link">View Project →</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <h2 class="section-title">Contact Information</h2>
+    <div class="contact-container">
+      <div class="contact-info">
+        <div class="info-item">
+          <h3>Email</h3>
+          <p>Gmail: ayisha.baterina@gmail.com</p>
+          <p>School Email: alb3472@students.uc-bcf.edu.ph</p>
+        </div>
+        <div class="info-item">
+          <h3>Location</h3>
+          <p>La Trinidad, Benguet</p>
+        </div>
+        <div class="info-item">
+          <h3>Github</h3><a href="https://github.com/yisha819" target="_blank" class="github">GitHub</a>
+        </div>
+      </div>
+      <form class="contact-form">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Email Address" required />
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
 </body>
+
 </html>
