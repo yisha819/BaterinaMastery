@@ -17,7 +17,7 @@
   --shadow-medium: rgba(0, 0, 0, 0.1);
 }
 
-[data-theme="dark"] {
+[data-theme='dark'] {
   --bg-primary: #1a1a1a;
   --bg-secondary: #0f0f0f;
   --bg-tertiary: #252525;
@@ -40,7 +40,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  font-family:
+    'Segoe UI',
+    system-ui,
+    -apple-system,
+    sans-serif;
 }
 
 html {
@@ -50,8 +54,10 @@ html {
 body {
   background: var(--bg-secondary);
   color: var(--text-primary);
-  line-height: 1.8; 
-  transition: background 0.3s ease, color 0.3s ease;
+  line-height: 1.8;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
 }
 
 /* ===== 3. NAVIGATION ===== */
@@ -108,7 +114,7 @@ body {
 
 /* ===== 4. TYPOGRAPHY & SECTIONS ===== */
 .section {
-  padding: 10rem 12%; 
+  padding: 10rem 12%;
 }
 
 .section-soft {
@@ -116,8 +122,8 @@ body {
 }
 
 .section-title {
-  font-size: 2.0rem;
-  margin-bottom: 5rem; 
+  font-size: 2rem;
+  margin-bottom: 5rem;
   font-weight: 700;
   position: relative;
 }
@@ -142,10 +148,10 @@ body {
 }
 
 .title {
-  font-size: clamp(2rem, 8vw, 3.5rem); 
+  font-size: clamp(2rem, 8vw, 3.5rem);
   font-weight: 800;
-  line-height: 1.2; 
-  margin-bottom: 0.5rem; 
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
   overflow: visible;
 }
 
@@ -157,26 +163,28 @@ body {
   display: inline-block;
   font-weight: 900;
   animation: gradientMove 4s linear infinite;
-  
 
   transition: transform 0.2s ease-out;
   transform-style: preserve-3d;
-  
 
-  padding: 0.1em 0; 
+  padding: 0.1em 0;
 }
 
 @keyframes gradientMove {
-  0% { background-position: 0% 50%; }
-  100% { background-position: 200% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
 }
 
 .subtitle {
   font-size: 1.1rem;
-  margin-top: 0; 
+  margin-top: 0;
   color: var(--text-secondary);
   letter-spacing: 0.05em;
-  display: block; 
+  display: block;
 }
 
 /* ===== 6. ABOUT SECTION (Photo Layout) ===== */
@@ -223,7 +231,9 @@ body {
   border: 1px solid var(--input-border);
   margin-bottom: 2.5rem;
   box-shadow: 0 10px 30px var(--shadow-light);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .info-card:hover {
@@ -254,7 +264,8 @@ body {
   color: var(--text-secondary);
 }
 
-.skill-grid, .project-grid {
+.skill-grid,
+.project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 3rem;
@@ -264,9 +275,15 @@ body {
   border-top: 6px solid var(--accent-color);
 }
 
-.accent-blue { --accent-color: var(--accent-blue); }
-.accent-green { --accent-color: var(--accent-green); }
-.accent-orange { --accent-color: var(--accent-orange); }
+.accent-blue {
+  --accent-color: var(--accent-blue);
+}
+.accent-green {
+  --accent-color: var(--accent-green);
+}
+.accent-orange {
+  --accent-color: var(--accent-orange);
+}
 
 /* ===== 8. PROJECTS ===== */
 .project-card {
@@ -315,7 +332,8 @@ body {
   gap: 1.5rem;
 }
 
-.contact-form input, .contact-form textarea {
+.contact-form input,
+.contact-form textarea {
   padding: 1.2rem;
   border-radius: 12px;
   border: 1px solid var(--input-border);
@@ -333,6 +351,19 @@ body {
   font-weight: 700;
   cursor: pointer;
   transition: 0.3s;
+}
+
+.github {
+  display: inline-flex;
+  color: var(--accent-blue);
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.github:hover {
+  color: var(--accent-green);
+  transform: translateY(-2px);
 }
 
 /* ===== 10. THEME TOGGLE & MOBILE ===== */
@@ -356,24 +387,57 @@ body {
   transition: transform 0.3s;
 }
 
-[data-theme="dark"] .theme-toggle-circle {
+[data-theme='dark'] .theme-toggle-circle {
   transform: translateX(28px);
 }
 
 .menu-toggle {
-  display: none;
-  font-size: 1.8rem;
+  position: relative;
+  z-index: 1100;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  width: 44px;
+  height: 40px;
+  padding: 8px;
   background: none;
   border: none;
-  color: var(--text-primary);
   cursor: pointer;
 }
 
+.menu-bar {
+  display: block;
+  width: 100%;
+  height: 3px;
+  border-radius: 3px;
+  background: var(--text-primary);
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.menu-toggle.open .menu-bar:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+
+.menu-toggle.open .menu-bar:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.open .menu-bar:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
 @media (max-width: 768px) {
-  .section { padding: 6rem 8%; }
-  .about-grid, .contact-container { grid-template-columns: 1fr; gap: 4rem; }
-  .nav nav { display: none; }
-  .menu-toggle { display: block; }
+  .section {
+    padding: 6rem 8%;
+  }
+  .about-grid,
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
 }
 
 /* ===== 11. TYPEWRITER EFFECT ===== */
@@ -386,8 +450,13 @@ body {
 }
 
 @keyframes blink-caret {
-  from, to { color: transparent }
-  50% { color: var(--accent-blue); }
+  from,
+  to {
+    color: transparent;
+  }
+  50% {
+    color: var(--accent-blue);
+  }
 }
 
 /* ===== 12. TIMELINE, SEMINARS & BADGES ===== */
@@ -494,5 +563,38 @@ body {
   .timeline-split {
     grid-template-columns: 1fr;
     gap: 3rem;
+  }
+}
+
+/* ===== 13. HAMBURGER NAVIGATION (dropdown) ===== */
+.nav-right {
+  position: relative;
+  gap: 1.25rem;
+}
+
+.nav nav {
+  display: none;
+  position: absolute;
+  top: calc(100% + 1.2rem);
+  right: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.1rem;
+  min-width: 220px;
+  background: var(--nav-bg);
+  padding: 1.5rem 2rem;
+  border: 1px solid var(--input-border);
+  border-radius: 15px;
+  box-shadow: 0 15px 40px var(--shadow-medium);
+  z-index: 1050;
+}
+
+.nav nav.open {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .nav-right {
+    gap: 1rem;
   }
 }
